@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+}
+
+header {
+    overflow: hidden;
+    background-color: red;
+    position: fixed;
+    top: 0;
+    width: 100%;
+	
+}
+
+header a {
+	background-color: rgb(150, 0 , 0);
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+	border-radius: 5px;
+	border: black;
+}
+
+header a:hover {
+    background-color: rgb(107, 0, 0);
+    color: rgb(255, 255, 255);
+	border-radius: 5px;
+	border: black;
+}
+/*
+.view-btn {
+    background-color: #198754;    
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.view-btn:hover {
+    background-color: #0c5e38;
+}
+*/
+
+.edit-btn {
+    background-color: rgb(2, 61, 255);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.edit-btn:hover {
+    background-color: rgb(4, 37, 146);
+}
+
+.dlt-btn {
+    background-color: rgb(219, 4, 4);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.dlt-btn:hover {
+    background-color: rgb(90, 0, 0);
+    color: white;
+}
+
+img  {
+    width: 200px;
+}
+
+.main {
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.container-itens {
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.container-lista-itens {
+    width: 200px;
+}
+
+.container-buttons {
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.enviar-form {
+    background-color: #198754;
+    color: white;
+    border-radius: 10px;
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.enviar-form:hover {
+    background-color: #15a160;
+}
+
+.enviar-form:active {
+    background-color: #0c5e38;
+}
+
+.input-group input {
+    display: block;
+    padding: 5px;
+    width: 250px;
+}
+

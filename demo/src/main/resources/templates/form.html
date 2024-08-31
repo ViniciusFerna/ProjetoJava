@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<html lang="pt-br" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formuláio</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <a href="/demo/"><b>Retornar</b></a>
+    </header>
+    <div class="main">
+        <form th:action="@{/demo/add}" th:object="${paciente}" method="post" enctype="multipart/form-data">
+            <input type="hidden" th:field="*{id}">
+        <div class="container-form">
+            <h2 th:text="${paciente.id != null} ? 'Editar Paciente' : 'Adicionar Paciente' "></h2>
+            <div class="input-nome-paciente input-group">
+                <label>Nome do Paciente</label>
+                <input th:field="*{nome}" type="text" class="input" placeholder="Digite o nome..." />
+
+            </div>
+
+            <div class="input-descricao-cliente input-group">
+                <label>Descrição da amostra</label>
+                <input th:field="*{descricao}" type="text" class="input" placeholder="Digite a descrição...">
+            </div>
+
+            <div class="input-data-paciente input-group">
+                <label>Data de nascimento cliente</label>
+                <input th:field="*{data}" type="date" class="input" />
+            </div>
+            <div class="input-imagem-amostra input-group">
+                <label>Imagem da amostra</label>
+                <input type="file" name="imagem" id="imagem" class="input">
+
+            </div>
+
+            <div class="button-enviar">
+                <button th:text="${paciente.id != null} ? 'Atualizar' : 'Cadastrar'" type="submit" class="enviar-form">Enviar</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

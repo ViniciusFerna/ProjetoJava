@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sangue Livre</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <a href="/demo/form"><b>Adicionar paciente</b></a>
+    </header>
+    <div class="container-itens">
+
+
+        <div th:each="demo : ${demo}" class="container-lista-itens">
+
+            <img th:src="@{${demo.imagem}}" alt="sangue">
+            <h2 th:text="${demo.nome}">Nome Cliente</h2>
+			<p th:text="${demo.descricao}">Descricao do cliente</p>
+            <p th:text="${#dates.format(demo.data, 'dd/MM/yyyy')}">Data/de/Retirada</p>
+            <div class="container-buttons">
+
+                <a th:href="@{/demo/form/{id}(id=${demo.id})}">
+                    <button class="edit-btn">Editar</button>
+                </a>
+                <a th:href="@{/demo/delete/{id}(id=${demo.id})}">
+                    <button class="dlt-btn">Deletar</button>
+                </a>
+            </div>
+        </div>
+
+        
+        
+    </div>
+
+</body>
+</html>
